@@ -1,0 +1,175 @@
+﻿
+@{
+    ViewBag.Title = "CadastroEmpresa";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid cadastro">
+    <div class="container" id="Cadastro">
+        <form action="@Url.Action("LoginEmpresa","Account")" method="post" onsubmit="cadastrado()">
+            <fieldset>
+                <legend>Dados da Empresa</legend>
+                <div class="container col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        <label for="MatriculaAluno">Razão Social:</label>
+                        <input class="form-control" type="text" id="MatriculaAluno" name="Nome" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="SenhaAluno">CNPJ:</label>
+                        <input class="form-control" type="text" id="SenhaAluno" name="CPF" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="SenhaAluno">Telefone:</label>
+                        <input class="form-control" type="tel" id="Telefone" name="CPF" required />
+                    </div>
+                </div>
+                <div class="container col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        <label for="MatriculaAluno">Nome Fantasia:</label>
+                        <input class="form-control" type="text" id="MatriculaAluno" name="Naturalidade" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="SenhaAluno">Inscrição Estadual:</label>
+                        <input class="form-control" type="text" id="SenhaAluno" name="Data de Nacimento" />
+                    </div>
+                    <div class="form-group">
+                        <label for="SenhaAluno">Ramal:</label>
+                        <input class="form-control" type="tel" id="SenhaAluno" name="Celular" />
+                    </div>
+                </div>
+            </fieldset>
+            <hr />
+            <fieldset>
+                <div class="container col-sm-6 col-xs-12">
+                    <fieldset>
+                        <div class="form-group col-sm-6 col-xs-12">
+                            <label for="MatriculaAluno">CEP:</label><a href="http://www.buscacep.correios.com.br/sistemas/buscacep/" target="_blank" class="pull-right">Esqueceu o CEP?</a>
+                            <input class="form-control" type="text" id="MatriculaAluno" name="Nome" required />
+                        </div>
+                        <div class="form-group col-sm-6 col-xs-12">
+                            <label for="SenhaAluno">Bairro:</label>
+                            <input class="form-control" type="text" id="SenhaAluno" name="CPF" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="SenhaAluno">Rua:</label>
+                            <input class="form-control" type="tel" id="Telefone" name="CPF" required />
+                        </div>
+                        <div class="form-group col-sm-6 col-xs-12">
+                            <label for="MatriculaAluno">Numero:</label>
+                            <input class="form-control" type="text" id="MatriculaAluno" name="Nome" required />
+                        </div>
+                        <div class="form-group col-sm-6 col-xs-12">
+                            <label for="SenhaAluno">Complemento:</label>
+                            <input class="form-control" type="text" id="SenhaAluno" name="CPF" />
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="container col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        <label for="MunicipioVaga">Município:</label>
+                        <select id="MunicipioVaga" name="Municipio" class="form-control" required>
+                            <option>Selecione</option>
+                            <option>	Angra dos Reis	</option>
+                            <option>	Araruama	</option>
+                            <option>	Barra do Piraí	</option>
+                            <option>	Barra Mansa	</option>
+                            <option>	Belford Roxo	</option>
+                            <option>	Cabo Frio	</option>
+                            <option>	Campos dos Goytacazes	</option>
+                            <option>	Duque de Caxias	</option>
+                            <option>	Guapimirim	</option>
+                            <option>	Itaboraí	</option>
+                            <option>	Itaguaí	</option>
+                            <option>	Itaperuna	</option>
+                            <option>	Japeri	</option>
+                            <option>	Macaé	</option>
+                            <option>	Magé	</option>
+                            <option>	Maricá	</option>
+                            <option>	Mesquita	</option>
+                            <option>	Nilópolis	</option>
+                            <option>	Niterói	</option>
+                            <option>	Nova Friburgo	</option>
+                            <option>	Nova Iguaçu	</option>
+                            <option>	Petrópolis	</option>
+                            <option>	Queimados	</option>
+                            <option>	Resende	</option>
+                            <option>	Rio Bonito	</option>
+                            <option>	Rio das Ostras	</option>
+                            <option>	Rio de Janeiro	</option>
+                            <option>	São Gonçalo	</option>
+                            <option>	São João de Meriti	</option>
+                            <option>	São Pedro da Aldeia	</option>
+                            <option>	Saquarema	</option>
+                            <option>	Seropédica	</option>
+                            <option>	Teresópolis	</option>
+                            <option>	Três Rios	</option>
+                            <option>	Valença	</option>
+                            <option>	Volta Redonda	</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="MunicipioVaga">UF:</label>
+                        <select id="MunicipioVaga" name="Municipio" class="form-control" required>
+                            <option>Selecione</option>
+                            <option>	AC	</option>
+                            <option>	AL	</option>
+                            <option>	AP	</option>
+                            <option>	AM	</option>
+                            <option>	BA	</option>
+                            <option>	CE	</option>
+                            <option>	DF	</option>
+                            <option>	ES	</option>
+                            <option>	GO	</option>
+                            <option>	MA	</option>
+                            <option>	MT	</option>
+                            <option>	MS	</option>
+                            <option>	MG	</option>
+                            <option>	PA	</option>
+                            <option>	PB	</option>
+                            <option>	PR	</option>
+                            <option>	PE	</option>
+                            <option>	PI	</option>
+                            <option>	RJ	</option>
+                            <option>	RN	</option>
+                            <option>	RS	</option>
+                            <option>	RO	</option>
+                            <option>	RR	</option>
+                            <option>	SC	</option>
+                            <option>	SP	</option>
+                            <option>	SE	</option>
+                            <option>	TO	</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                    </div>
+                </div>
+            </fieldset>
+            <hr />
+            <fieldset>
+                <div class="container col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        <label for="MatriculaAluno">E-mail:</label>
+                        <input class="form-control" type="email" id="MatriculaAluno" name="Nome" required />
+                    </div>
+                </div>
+                <div class="container col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        <label for="SenhaAluno">Senha:</label>
+                        <input class="form-control" type="password" id="SenhaAluno" name="CPF" required maxlength="8" />
+                    </div>
+                </div>
+            </fieldset>
+            <hr />
+            <div class="col-md-6 col-xs-10 col-md-offset-3 col-xs-offset-1">
+                <input type="submit" value="Cadastrar" class="candidatura btn btn-success col-xs-5" />
+                <input type="button" value="Voltar" onclick="history.back()" class="candidatura btn btn-primary col-xs-5" />
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+    function cadastrado() {
+            alert("Cadastro Efetuado com Sucesso!");
+            window.location.href = "@Url.Action("LoginEmpresa", "Account")";
+    }
+</script>

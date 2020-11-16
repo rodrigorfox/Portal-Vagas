@@ -1,0 +1,89 @@
+﻿
+@{
+    ViewBag.Title = "Empresa";
+    Layout = "~/Views/Shared/_LayoutPages.cshtml";
+}
+
+<div class="container-fluid main-empresa">
+    <div class="UserPage col-xs-10 col-xs-offset-1 col-sm-3" id="UserInformation">
+        <div class="profilePic col-xs-5">
+            <img src="~/Content/Logos/petrobras.png" alt="foto" class="img-circle img-responsive" />
+        </div>
+        <div class="DataCadastro col-xs-6">
+            <dl>
+                <dt>Nome:</dt>
+                <dd>Petrobrás S.A</dd>
+                <dt>E-mail:</dt>
+                <dd>Rh@petrobras.com.br</dd>
+            </dl>
+        </div>
+        <div class="dados col-xs-12">
+            <dl>
+                <dt>Ramo:</dt>
+                <dd>Petróleo e gás</dd>
+                <dt>Telefone:</dt>
+                <dd>(21) 3224-4477</dd>
+                <dt>Endereço:</dt>
+                <dd>Av. República do Chile, 65 - Centro, Rio de Janeiro</dd>
+            </dl>
+        </div>
+        <div class="clearfix"></div>
+        <div>
+            <form>
+                <input type="button" value="Atualizar Dados" class="btn btn-primary" />
+            </form>
+        </div>
+    </div>
+    <div class="UserPage col-xs-10 col-xs-offset-1 col-sm-6">
+        <h2>Últimas vagas divulgadas</h2>
+        <div id="listaVagasAuto">
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr class="danger">
+                        <td>Código</td>
+                        <td>Descrição</td>
+                        <td>Remuneração</td>
+                        <td class="horario">Horário</td>
+                    </tr>
+                </thead>
+                <tfoot>
+
+                </tfoot>
+                <tbody>
+                    <tr>
+                        <td><a href="@Url.Action("EmpresaVaga","Vagas")">125462</a></td>
+                        <td>Estágio em desenvolvimento Web</td>
+                        <td>R$ 1.400,00</td>
+                        <td class="horario">09 às 18h</td>
+                    </tr>
+                    <tr>
+                        <td><a href="@Url.Action("EmpresaVaga","Vagas")">125564</a></td>
+                        <td>Estágio em desenvolvimento Java</td>
+                        <td>R$ 1.200,00</td>
+                        <td class="horario">09 às 18h</td>
+                    </tr>
+                    <tr>
+                        <td><a href="@Url.Action("EmpresaVaga","Vagas")">126841</a></td>
+                        <td>Estágio em Suporte Técnico</td>
+                        <td>R$ 1.600,00</td>
+                        <td class="horario">09 às 18h</td>
+                    </tr>
+                    <tr>
+                        <td><a href="@Url.Action("EmpresaVaga","Vagas")">128451</a></td>
+                        <td>Estágio em Infraestrutura</td>
+                        <td>R$ 1.000,00</td>
+                        <td class="horario">09 às 18h</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <form>
+            <div class="col-lg-11 col-md-8 col-xs-10 col-md-offset-2 col-xs-offset-1">
+                <a href="@Url.Action("CadastroVaga","Vagas")" type="button" class="btn btn-primary col-lg-4 col-lg-offset-0 col-md-6 col-sm-8 col-xs-10 col-md-offset-3 col-sm-offset-2 col-xs-offset-1">Cadastrar Vaga</a>
+                <a href="@Url.Action("BuscarCandidato","PainelInterno")" type="button" class="btn btn-primary col-lg-4 col-lg-offset-0 col-md-6 col-sm-8 col-xs-10 col-md-offset-3 col-sm-offset-2 col-xs-offset-1">Buscar Candidatos</a>
+                @*<input type="button" value="Buscar Candidatos" class="btn btn-primary col-lg-4 col-lg-offset-0 col-md-6 col-sm-8 col-xs-10 col-md-offset-3 col-sm-offset-2 col-xs-offset-1" />*@
+            </div>
+        </form>
+    </div>
+</div>
+

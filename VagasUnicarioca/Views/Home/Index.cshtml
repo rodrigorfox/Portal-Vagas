@@ -1,0 +1,135 @@
+﻿@model IList<VagasUnicarioca.Entidades.Usuario>
+@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="carousel slide" id="galeria" data-ride="carousel">
+    <!--indicadores-->
+    <ol class="carousel-indicators">
+        <li data-target="#galeria" data-slide-to="0" class="active"></li>
+        <li data-target="#galeria" data-slide-to="1"></li>
+        <li data-target="#galeria" data-slide-to="2"></li>
+        <li data-target="#galeria" data-slide-to="3"></li>
+        <li data-target="#galeria" data-slide-to="4"></li>
+    </ol>
+
+    <!--carrossel de imagens-->
+    <div class="carousel-inner">
+        <div class="item active">
+            <img src="~/Content/_img/banner1.jpg" class="img-responsive">
+        </div>
+        <div class="item">
+            <img src="~/Content/_img/banner2.jpg" class="img-responsive">
+        </div>
+        <div class="item">
+            <img src="~/Content/_img/banner3.jpg" class="img-responsive">
+        </div>
+        <div class="item">
+            <img src="~/Content/_img/banner4.jpg" class="img-responsive">
+        </div>
+        <div class="item">
+            <img src="~/Content/_img/banner5.jpg" class="img-responsive">
+        </div>
+    </div><!--carousel-inner -->
+    <!--setas laterais-->
+    <a class="left carousel-control"
+       href="#galeria" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="right carousel-control"
+       href="#galeria" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+
+    </a>
+</div><!--carousel-slide -->
+
+
+
+<div class="container-fluid main">
+    <!--anuncios -->
+    <hr />
+    <div class="row">
+        <div class="col-md-8 col-sm-12 col-xs-12" id="anuncios">
+            <figure class="anuncio col-md-3 col-sm-3 col-xs-6">
+                <img src="~/Content/_img/anuncio1.jpg" class="img-responsive" />
+                <figcaption>METODOLOGIA DINÂMICA</figcaption>
+            </figure>
+            <figure class="anuncio col-md-3 col-sm-3 col-xs-6">
+                <img src="~/Content/_img/anuncio2.jpg" class="img-responsive" />
+                <figcaption>ESTRUTURA MODERNA</figcaption>
+            </figure>
+            <figure class="anuncio col-md-3 col-sm-3 col-xs-6">
+                <img src="~/Content/_img/anuncio3.jpg" class="img-responsive" />
+                <figcaption>CURRÍCULOS ATUALIZADOS</figcaption>
+            </figure>
+            <figure class="anuncio col-md-3 col-sm-3 col-xs-6">
+                <img src="~/Content/_img/anuncio4.jpg" class="img-responsive" />
+                <figcaption>PROFESSORES QUALIFICADOS</figcaption>
+            </figure>
+        </div>
+        <div class=" container-fluid col-md-4 col-sm-12 col-xs-12" id="video">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe width="834" height="497" src="https://www.youtube.com/embed/yLVLG21w4Xs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    <!--empresas anunciantes carrossel -->
+    <hr />
+    <div class="container-fluid">
+        <h4>Empresas Anunciantes</h4>
+        <section class="customer-logos slider">
+            <div class="slide">
+                <a href="https://www.bb.com.br/pbb/pagina-inicial#/" target="_blank" class="col-lg-0">
+                    <img src="~/Content/Logos/bb.jpg" />
+                </a>
+            </div>
+            <div class="slide">
+                <a href="https://www.unicarioca.edu.br/" target="_blank" class="col-lg-0">
+                    <img src="~/Content/Logos/unicarioca.jpg" />
+                </a>
+            </div>
+            <div class="slide">
+                <a href="http://www.caixa.gov.br/Paginas/home-caixa.aspx" target="_blank" class="col-lg-0">
+                    <img src="~/Content/Logos/caixa.jpg" />
+                </a>
+            </div>
+            <div class="slide">
+                <a href="https://ciaathletica.com.br/" target="_blank" class="col-lg-0">
+                    <img src="~/Content/Logos/ciaath.jpg" />
+                </a>
+            </div>
+            <div class="slide">
+                <a href="https://www.dell.com/pt-br" target="_blank" class="col-lg-0">
+                    <img src="~/Content/Logos/dell.png" />
+                </a>
+            </div>
+            <div class="slide">
+                <a href="https://www.ibm.com/br-pt" target="_blank" class="col-lg-0">
+                    <img src="~/Content/Logos/ibm.png" />
+                </a>
+            </div>
+            <div class="slide">
+                <a href="https://www.microsoft.com/pt-br/" target="_blank" class="col-lg-0">
+                    <img src="~/Content/Logos/microsoft.png" />
+                </a>
+            </div>
+            <div class="slide">
+                <a href="http://www.petrobras.com.br/pt/" target="_blank" class="col-lg-0">
+                    <img src="~/Content/Logos/petrobras.png" />
+                </a>
+            </div>
+            <div class="slide">
+                <a href="https://www.zydax.com.br/" target="_blank" class="col-lg-0">
+                    <img src="~/Content/Logos/zydax.jpg" />
+                </a>
+            </div>
+        </section>
+
+    </div>
+</div>
+@section scripts{
+    <script src="~/Scripts/slick.js"></script>
+    <script src="~/Scripts/script.js"></script>
+}

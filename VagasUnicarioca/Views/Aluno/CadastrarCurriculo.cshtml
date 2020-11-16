@@ -1,0 +1,101 @@
+﻿@{
+    ViewBag.Title = "CadastrarCurriculo";
+    Layout = "~/Views/Shared/_LayoutPages.cshtml";
+}
+
+<div class="container-fluid cadastro">
+    <div class="container" id="Cadastro">
+        <form action="@Url.Action("CadastrarCurriculo","Aluno")" method="post" onsubmit="cadastrado()">
+            <fieldset>
+                <legend>Cadastro de Currículo</legend>
+                <div class="container col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        <label for="MatriculaAluno">Experiência:</label>
+                        <textarea class="form-control" id="Experiencia" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="SenhaAluno">Idiomas:</label>
+                        <textarea class="form-control" id="Idiomas" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="CursoVaga">Sexo:</label>
+                        <select id="CursoVaga" name="Sexo" class="form-control">
+                            <option>Selecione</option>
+                            <option>	FEMININO	</option>
+                            <option>	MASCULINO	</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="SenhaAluno">Habilidades:</label>
+                        <textarea class="form-control" id="Habilidades" required></textarea>
+                    </div>
+                </div>
+
+                <div class="container col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        <label for="CursoVaga">Curso:</label>
+                        <select id="CursoVaga" name="Curso" class="form-control">
+                            <option>Selecione</option>
+                            <option>	ADMINISTRAÇÃO	</option>
+                            <option>	ANÁLISE E DESENVOLVIMENTO DE SISTEMAS	</option>
+                            <option>	CIÊNCIA DA COMPUTAÇÃO	</option>
+                            <option>	CIÊNCIAS CONTÁBEIS	</option>
+                            <option>	DESIGN	</option>
+                            <option>	DIREITO	</option>
+                            <option>	ENGENHARIA CIVIL	</option>
+                            <option>	ENGENHARIA DA COMPUTAÇÃO	</option>
+                            <option>	ENGENHARIA DE PRODUÇÃO	</option>
+                            <option>	ENGENHARIA ELÉTRICA	</option>
+                            <option>	GESTÃO DE RECURSOS HUMANOS	</option>
+                            <option>	JORNALISMO	</option>
+                            <option>	LOGÍSTICA	</option>
+                            <option>	MARKETING	</option>
+                            <option>	PEDAGOGIA	</option>
+                            <option>	PUBLICIDADE E PROPAGANDA	</option>
+                            <option>	REDES DE COMPUTADORES	</option>
+                        </select>
+                    </div>
+                    </div>
+                    <div class="container col-sm-6 col-xs-12">
+                        <div class="form-group">
+                            <label for="PeriodoVaga">Período:</label>
+                            <select id="PeriodoVaga" name="Periodo" class="form-control">
+                                <option>Selecione</option>
+                                <option>	1º	Período	</option>
+                                <option>	2º	Período	</option>
+                                <option>	3º	Período	</option>
+                                <option>	4º	Período	</option>
+                                <option>	5º	Período	</option>
+                                <option>	6º	Período	</option>
+                                <option>	7º	Período	</option>
+                                <option>	8º	Período	</option>
+                                <option>	9º	Período	</option>
+                                <option>	10º	Período	</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="container col-sm-6 col-xs-12">                        
+                        <div class="form-group">
+                            <label for="SenhaAluno">Diferenciais:</label>
+                            <textarea class="form-control" id="Diferenciais" required></textarea>
+                        </div>                        
+                    </div>
+            </fieldset>
+            <hr />
+            <div class="col-md-6 col-xs-10 col-md-offset-3 col-xs-offset-1">
+                <input type="submit" value="Cadastrar" class="candidatura btn btn-success col-xs-5" />
+                <input type="button" value="Voltar" onclick="history.back()" class="candidatura btn btn-primary col-xs-5" />
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+    function cadastrado() {
+            alert("Curriculo Cadastrado com Sucesso!");
+            window.location.href = "@Url.Action("Aluno", "PainelInterno")";
+    }
+</script>
+

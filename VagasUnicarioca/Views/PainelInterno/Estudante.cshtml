@@ -1,0 +1,87 @@
+﻿@model VagasUnicarioca.Entidades.Aluno
+@{
+    ViewBag.Title = "Estudante";
+    Layout = "~/Views/Shared/_LayoutPages.cshtml";
+}
+
+<div class="container-fluid main-aluno">
+    <div class="UserPage col-xs-10 col-xs-offset-1 col-sm-3" id="UserInformation">
+        <div class="profilePic col-xs-5">
+            <img src="~/Content/_img/Aluno.jpg" alt="foto" class="img-circle img-responsive" />
+        </div>
+        <div class="DataCadastro col-xs-6">
+            <dl>
+                <dt>Nome:</dt>
+                <dd>Fabricia Salles</dd>
+                <dt>E-mail:</dt>
+                <dd>fabricia1992@gmail.com</dd>
+            </dl>
+        </div>
+        <div class="dados col-xs-12">
+            <dl>
+                <dt>Curso:</dt>
+                <dd>Ciência da Computação</dd>
+                <dt>Telefone:</dt>
+                <dd>(21) 98999-9999</dd>
+                <dt>Endereço:</dt>
+                <dd>Rua Venceslau 52 - Meier</dd>
+            </dl>
+        </div>
+        <div class="clearfix"></div>
+        <div>
+            <form>
+                <a href="@Url.Action("CadastrarCurriculo","Aluno")" type="button" class="btn btn-primary">Atualizar Currículo</a>
+            </form>
+        </div>
+    </div>
+    <div class="UserPage col-xs-10 col-xs-offset-1 col-sm-6">
+        <h2>Vagas com seu Perfil</h2>
+        <div id="listaVagasAuto">
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr class="danger">
+                        <td>Código</td>
+                        <td>Descrição</td>
+                        <td>Remuneração</td>
+                        <td class="horario">Horário</td>
+                    </tr>
+                </thead>
+                <tfoot>
+
+                </tfoot>
+                <tbody>
+                    <tr>
+                        <td><a href="@Url.Action("DetalheVaga","Vagas")">125462</a></td>
+                        <td>Estágio em desenvolvimento Web</td>
+                        <td>R$ 1.400,00</td>
+                        <td class="horario">09 às 18h</td>
+                    </tr>
+                    <tr>
+                        <td><a href="@Url.Action("DetalheVaga","Vagas")">125564</a></td>
+                        <td>Estágio em desenvolvimento Java</td>
+                        <td>R$ 1.200,00</td>
+                        <td class="horario">09 às 18h</td>
+                    </tr>
+                    <tr>
+                        <td><a href="@Url.Action("DetalheVaga","Vagas")">126841</a></td>
+                        <td>Estágio em Suporte Técnico</td>
+                        <td>R$ 1.600,00</td>
+                        <td class="horario">09 às 18h</td>
+                    </tr>
+                    <tr>
+                        <td><a href="@Url.Action("DetalheVaga","Vagas")">128451</a></td>
+                        <td>Estágio em Infraestrutura</td>
+                        <td>R$ 1.000,00</td>
+                        <td class="horario">09 às 18h</tdclass="horario">
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <form>
+            <a href="@Url.Action("Index","Vagas")" type="button" class="btn btn-danger col-lg-4 col-md-6 col-sm-8 col-xs-10 col-lg-offset-4 col-md-offset-3 col-sm-offset-2 col-xs-offset-1">Buscar Vagas</a>
+        </form>
+    </div>
+</div>
+
+

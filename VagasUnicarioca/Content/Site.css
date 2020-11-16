@@ -1,0 +1,261 @@
+﻿body {
+    padding-top: 50px;
+    height: 100%;
+}
+
+.body-content {
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.navbar {
+    background-color: white;
+}
+
+
+@media(min-width: 768px) {
+    #anuncios figcaption {
+        font-size: 20px;
+        color: black;
+    }
+}
+
+@media(max-width: 768px) {
+    #anuncios figcaption {
+        font-size: 30px;
+        color: black;
+    }
+}
+
+/*navbar--------------------*/
+.navbar-brand {
+    display: block;
+    padding: 5px;
+    padding-left: 20px;
+}
+
+.carousel-inner {
+    max-height: 600px;
+}
+
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+
+/*rodapé Layout--------------------------------*/
+#Social {
+    background-color: darkred;
+    padding: 20px;
+}
+
+    #Social h4 {
+        font-weight: bold;
+    }
+
+
+#Info {
+    padding: 20px;
+    background-color: maroon;
+}
+
+footer {
+    font-weight: bold;
+    color: white;
+}
+/*rodapé Layout*/
+
+/*Anuncios----------------------------------*/
+#video {
+    padding: 0px;
+    transition: .5s ease;
+}
+
+#anuncios {
+    padding: 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+    #anuncios figcaption {
+        position: absolute;
+        top: 40%;
+        left: 0 auto;
+        color: white;
+        text-shadow: 0px 0px 5px black;
+    }
+
+.anuncio {
+    display: block;
+    position: relative;
+    opacity: 1;
+    margin: 0;
+    padding: 0;
+    transition: .5s ease;
+}
+
+    .anuncio:hover .img-responsive {
+        opacity: 0.3;
+        transition: .5s ease;
+    }
+/*Anuncios*/
+
+/*campos de login------------------*/
+#Login {
+    background-color: white;
+    padding: 20px;
+    /*box-shadow: 1px 1px 3px lightgrey;
+    width: 300px;*/
+    margin: 30px;
+    border-radius: 10px;
+    transition: .7s;
+}
+
+#Cadastro {
+    background-color: white;
+    padding: 20px;
+    /*box-shadow: 1px 1px 3px lightgrey;
+    width: 300px;*/
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+
+.busca {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: white;
+    padding: 20px;
+    transition: .7s;
+    min-height: 63.1vh;
+}
+
+#captcha {
+    /*width: 180px;*/
+    height: 50px;
+    background-color: yellow;
+    box-shadow: 1px 1px 2px;
+    margin: 20px;
+    padding: 10px;
+}
+
+legend {
+    font-weight: bold;
+    color: maroon;
+    text-shadow: 1px 1px 2px grey;
+    font-size: 30px;
+}
+
+#Login legend {
+    font-weight: bold;
+    color: maroon;
+    text-shadow: 1px 1px 2px grey;
+    text-align: center;
+    font-size: 30px;
+}
+
+.main-aluno {
+    background-image: url('_img/PaginaAluno.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 69.3vh;
+}
+
+.main-empresa {
+    background-image: url('_img/PaginaEmpresa.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 69.3vh;
+}
+
+
+
+/*pagina de busca de vagas*/
+
+#containerVagas {
+    margin-top: 30px;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+form fieldset p {
+    text-align: center;
+}
+
+.busca h2, .UserPage h2 {
+    font-weight: bold;
+    color: maroon;
+    text-shadow: 1px 1px 2px grey;
+    text-align: center;
+    font-size: 30px;
+}
+
+#labelfiltro {
+    width: 300px;
+}
+
+#desricaoVaga {
+    box-shadow: 0px 0px 3px;
+    padding: 20px 30px 0 20px;
+}
+
+.candidatura {
+    margin: 5px;
+}
+
+#desricaoVaga dl dd {
+    text-align: justify;
+    padding-bottom: 20px;
+}
+
+.profilePic {
+    width: 100px;
+}
+
+.UserPage {
+    background-color: white;
+    box-shadow: 1px 1px 3px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.7s;
+}
+
+@media(min-width: 946px) {
+    #UserInformation {
+        width: 300px;
+    }
+}
+
+#listaVagasAuto {
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 900px) {
+    td.horario {
+        visibility: collapse;
+    }
+}
+
+@media (max-width: 767px) {
+    td.horario {
+        visibility: visible;
+    }
+}
+
+@media (max-width: 565px) {
+    td.horario {
+        visibility: collapse;
+    }
+}
+
+.cadastro {
+    background-color: #f1f1f1;
+}

@@ -1,0 +1,45 @@
+﻿@model VagasUnicarioca.Entidades.Aluno
+@{
+    ViewBag.Title = "Cadastro";
+}
+
+<link href="~/Content/DatePicker/css/bootstrap-datepicker.css" rel="stylesheet" />
+<link href="~/Content/DatePicker/css/bootstrap-datepicker.min.css" rel="stylesheet" />
+
+<h3 style="text-align:center; margin-top:80px;">Cadastro de Reuniões e Eventos</h3>
+<i class="title-border"></i><br />
+<p class="text-center">Todos os campos marcados com * são obrigatórios.</p>
+<br />
+@using (Html.BeginForm("Cadastro", "Aluno", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="col-lg-12">
+        <form>
+            <div class="form-group col-lg-12">
+                <label for="exampleInputEmail1">Título</label>
+                @Html.TextBoxFor(x => x.Nome, new { @class = "form-control", placeholder = "Digite seu nome", required = "required", type = "text" })
+            </div>
+            <div class="form-group col-lg-12">
+                <label for="exampleFormControlTextarea1">Descrição</label>
+                @Html.TextBoxFor(x => x.NmMae, null, new { @class = "form-control", placeholder = "Mãe" })
+            </div>
+            <div class="form-group col-lg-4 col-sm-4">
+                <label for="exampleInputPassword1">Preço</label>
+                @Html.TextBoxFor(x => x.NmPai, new { @class = "form-control", placeholder = "Pai" })
+            </div>
+            <div class="form-group col-lg-4 col-sm-4">
+                <label for="exampleInputPassword1">Preço BNI</label>
+                @Html.TextBoxFor(x => x.Matricula, new { @class = "form-control", placeholder = "Valor para membros BNI", type = "text" })
+            </div>
+        </form>
+
+        <div class="col-lg-11">
+
+            <br />
+            <hr />
+            <button type="submit" class="btn btn-success">Salvar</button> |
+            @*@Html.ActionLink("Voltar", "Index", "Home", new { @class = "btn btn-primary" })*@
+
+        </div>
+    </div>
+}
+

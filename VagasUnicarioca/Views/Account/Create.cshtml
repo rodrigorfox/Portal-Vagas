@@ -1,0 +1,52 @@
+﻿@model VagasUnicarioca.Models.UsuarioModel
+@{
+    ViewBag.Title = "Create";
+}
+
+@using (Html.BeginForm("Adiciona", "Account", FormMethod.Post))
+{
+
+<div class="container containerComMargin">
+    <h3 class="text-center">Cadastro de usuários</h3>
+    <i class="title-borderInterno"></i><br />
+    <p class="text-center">Todos os campos com * são de preenchimento obrigatório</p>
+
+
+    @*@Html.ValidationMessage("usuario.Invalido")*@
+
+
+    <div class="form-group col-lg-6">
+        @Html.LabelFor(u => u.Alunos.Nome, "Nome:")
+        @Html.TextBoxFor(u => u.Alunos.Nome, new { @class = "form-control", required = "required" })
+        @Html.ValidationMessageFor(u => u.Alunos.Nome)
+    </div>
+
+    <div class="form-group col-lg-6">
+        @Html.LabelFor(u => u.Email, "E-mail:")
+        @Html.TextBoxFor(u => u.Email, new { type = "email", @class = "form-control", required = "required" })
+        @Html.ValidationMessageFor(u => u.Email)
+    </div>
+
+    <div class="form-group col-lg-6">
+        @Html.LabelFor(u => u.Senha, "Senha:")
+        @Html.PasswordFor(u => u.Senha, new { @class = "form-control", required = "required" })
+        @Html.ValidationMessageFor(u => u.Senha)
+    </div>
+    <div class="form-group col-lg-6">
+        @Html.LabelFor(u => u.Alunos.Cpf, "CPF:")
+        @Html.PasswordFor(u => u.Alunos.Cpf, new { @class = "form-control", required = "required" })
+        @Html.ValidationMessageFor(u => u.Alunos.Cpf)
+    </div>
+
+    <div class="col-lg-11">
+
+        <br />
+        <hr />
+        <button type="submit" class="btn btn-success">Salvar</button> |
+        @Html.ActionLink("Voltar", "Index", "ListaEventos", new { @class = "btn btn-primary" })
+
+    </div>
+</div>
+}
+
+

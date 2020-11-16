@@ -1,0 +1,106 @@
+﻿@model VagasUnicarioca.Entidades.Vaga
+ @{
+     ViewBag.Title = "Index";
+     Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="busca container-fluid col-lg-4 col-md-6 col-sm-8 col-xs-10 col-lg-offset-4 col-md-offset-3 col-sm-offset-2 col-xs-offset-1">
+    @using (Html.BeginForm("Search", "Vagas", FormMethod.Post))
+    {
+        <fieldset>
+            <legend>Buscar Vagas</legend>
+            <div class="form-group">
+                <label class="control-label">Código da vaga:</label>
+                @Html.TextBox("Codigo", null, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label for="CursoVaga">Curso:</label>
+                <select id="CursoVaga" name="Curso" class="form-control">
+                    <option>Selecione</option>
+                    <option>	ADMINISTRAÇÃO	</option>
+                    <option>	ANÁLISE E DESENVOLVIMENTO DE SISTEMAS	</option>
+                    <option>	CIÊNCIA DA COMPUTAÇÃO	</option>
+                    <option>	CIÊNCIAS CONTÁBEIS	</option>
+                    <option>	DESIGN	</option>
+                    <option>	DIREITO	</option>
+                    <option>	ENGENHARIA CIVIL	</option>
+                    <option>	ENGENHARIA DA COMPUTAÇÃO	</option>
+                    <option>	ENGENHARIA DE PRODUÇÃO	</option>
+                    <option>	ENGENHARIA ELÉTRICA	</option>
+                    <option>	GESTÃO DE RECURSOS HUMANOS	</option>
+                    <option>	JORNALISMO	</option>
+                    <option>	LOGÍSTICA	</option>
+                    <option>	MARKETING	</option>
+                    <option>	PEDAGOGIA	</option>
+                    <option>	PUBLICIDADE E PROPAGANDA	</option>
+                    <option>	REDES DE COMPUTADORES	</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="PeriodoVaga">Período:</label>
+                <select id="PeriodoVaga" name="Periodo" class="form-control">
+                    <option>Selecione</option>
+                    <option>	1º	Período	</option>
+                    <option>	2º	Período	</option>
+                    <option>	3º	Período	</option>
+                    <option>	4º	Período	</option>
+                    <option>	5º	Período	</option>
+                    <option>	6º	Período	</option>
+                    <option>	7º	Período	</option>
+                    <option>	8º	Período	</option>
+                    <option>	9º	Período	</option>
+                    <option>	10º	Período	</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="MunicipioVaga">Município:</label>
+                <select id="MunicipioVaga" name="Municipio" class="form-control">
+                    <option>Selecione</option>
+                    <option>	Angra dos Reis	</option>
+                    <option>	Araruama	</option>
+                    <option>	Barra do Piraí	</option>
+                    <option>	Barra Mansa	</option>
+                    <option>	Belford Roxo	</option>
+                    <option>	Cabo Frio	</option>
+                    <option>	Campos dos Goytacazes	</option>
+                    <option>	Duque de Caxias	</option>
+                    <option>	Guapimirim	</option>
+                    <option>	Itaboraí	</option>
+                    <option>	Itaguaí	</option>
+                    <option>	Itaperuna	</option>
+                    <option>	Japeri	</option>
+                    <option>	Macaé	</option>
+                    <option>	Magé	</option>
+                    <option>	Maricá	</option>
+                    <option>	Mesquita	</option>
+                    <option>	Nilópolis	</option>
+                    <option>	Niterói	</option>
+                    <option>	Nova Friburgo	</option>
+                    <option>	Nova Iguaçu	</option>
+                    <option>	Petrópolis	</option>
+                    <option>	Queimados	</option>
+                    <option>	Resende	</option>
+                    <option>	Rio Bonito	</option>
+                    <option>	Rio das Ostras	</option>
+                    <option>	Rio de Janeiro	</option>
+                    <option>	São Gonçalo	</option>
+                    <option>	São João de Meriti	</option>
+                    <option>	São Pedro da Aldeia	</option>
+                    <option>	Saquarema	</option>
+                    <option>	Seropédica	</option>
+                    <option>	Teresópolis	</option>
+                    <option>	Três Rios	</option>
+                    <option>	Valença	</option>
+                    <option>	Volta Redonda	</option>
+                </select>
+            </div>
+            <div class="checkbox">
+                <label for="pcd">
+                    <input type="checkbox" id="pcd" />PCD
+                </label>
+            </div>
+
+            <input type="submit" value="Pesquisar" class="btn btn-danger col-lg-4 col-md-6 col-sm-8 col-xs-10 col-lg-offset-4 col-md-offset-3 col-sm-offset-2 col-xs-offset-1" />
+        </fieldset>
+    }
+</div>

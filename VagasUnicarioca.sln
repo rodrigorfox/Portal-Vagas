@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.271
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VagasUnicarioca", "VagasUnicarioca\VagasUnicarioca.csproj", "{69395188-BD66-4AD6-A6C1-234C5559CFEE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{69395188-BD66-4AD6-A6C1-234C5559CFEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69395188-BD66-4AD6-A6C1-234C5559CFEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69395188-BD66-4AD6-A6C1-234C5559CFEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69395188-BD66-4AD6-A6C1-234C5559CFEE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4CB48E91-7CC3-43F2-9251-C72222869E6C}
+	EndGlobalSection
+EndGlobal

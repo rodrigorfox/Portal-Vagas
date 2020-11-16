@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Portal Carreiras</title>
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar navbar-default navbar-fixed-top">
+        <section class="container">
+            <div class="navbar-header">
+                <a href="~/Home/Index" class="navbar-brand">
+                    <img src="~/Content/Logos/unicarioca.png" alt="Unicarioca" height="40" />
+                </a>
+
+                <button type="button"
+                        class="navbar-toggle"
+                        data-toggle="collapse"
+                        data-target="#menumovel"
+                        aria-expanded="false">
+
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse" id="menumovel">
+                <ul class="nav navbar-nav pull-right">
+                    <li>@Html.ActionLink("Início", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Vagas", "Index", "Vagas")</li>
+                    <li><a href="@Url.Action("Index","Home")" type="button" class="btn btn-default">Sair</a></li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <div class="clearfix"></div>
+        <hr />
+
+    </div>
+
+    <footer class="container-fluid">
+
+        <div class="row" align="center" id="Social">
+            <h4>Siga nas Redes Sociais</h4>
+            <div class="info col-lg-offset-0">
+                <a href="https://www.facebook.com/UniCarioca/" target="_blank" class="col-lg-0">
+                    <img src="~/Content/Logos/facebook1.png" width="30" />
+                </a>
+
+                <a href="https://www.instagram.com/unicarioca/" target="_blank" class="col-lg-0">
+                    <img src="~/Content/Logos/instagram1.png" width="30" />
+                </a>
+
+                <a href="https://twitter.com/UNICARIOCA" target="_blank" class="col-lg-0">
+                    <img src="~/Content/Logos/twitter1.png" width="30" />
+                </a>
+            </div>
+        </div>
+
+        <div class="row" align="center" id="Info">
+            <div class="box col-sm-12 col-md-6 col-lg-6 col-xl-6" align="center">
+                <p class="badge">Telefones:</p><br />
+                <p>(21) 988888888 / (21) 989999999</p>
+            </div>
+            <div class="box col-sm-12 col-md-6 col-lg-6 col-xl-6" align="center">
+                <p class="badge">&copy; @DateTime.Now.Year - Desenvolvido por Dev&Tec</p>
+            </div>
+        </div>
+
+
+    </footer>
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>

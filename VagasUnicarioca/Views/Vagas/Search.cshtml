@@ -1,0 +1,72 @@
+﻿
+@{
+    ViewBag.Title = "Busca de Vagas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="busca container-fluid col-lg-6 col-md-8 col-xs-10 col-lg-offset-3 col-md-offset-2 col-xs-offset-1">
+    <h2>Vagas</h2>
+    <hr />
+    <div class="form-group pull-right" id="labelfiltro">
+        <div class="input-group">
+            <span class="input-group-btn">
+                <button type="button" class="btn btn-primary">Pesquisar:</button>
+            </span>
+            <input class="form-control" type="search" id="filtrar" name="Filtrar"/>
+        </div>
+    </div>
+    <div class="row">
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr class="danger">
+                    <td>Código</td>
+                    <td>Descrição</td>
+                    <td>Remuneração</td>
+                    <td>Horário</td>
+                </tr>
+            </thead>
+            <tfoot>
+
+            </tfoot>
+            <tbody>
+                <tr>
+                    <td><a href="DetalheVaga">125462</a></td>
+                    <td>Estágio em desenvolvimento Web</td>
+                    <td>R$ 1.400,00</td>
+                    <td>09 às 18h</td>
+                </tr>
+                <tr>
+                    <td><a href="DetalheVaga">125564</a></td>
+                    <td>Estágio em desenvolvimento Java</td>
+                    <td>R$ 1.200,00</td>
+                    <td>09 às 18h</td>
+                </tr>
+                <tr>
+                    <td><a href="DetalheVaga">126841</a></td>
+                    <td>Estágio em Suporte Técnico</td>
+                    <td>R$ 1.600,00</td>
+                    <td>09 às 18h</td>
+                </tr>
+                <tr>
+                    <td><a href="DetalheVaga">128451</a></td>
+                    <td>Estágio em Infraestrutura</td>
+                    <td>R$ 1.000,00</td>
+                    <td>09 às 18h</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="row">
+            <input type="button" value="Voltar" onclick="history.back()" class="candidatura btn btn-primary" />
+            <div class="btn-group pull-right">
+                <button class="btn btn-default" type="button">Anterior</button>
+                <button class="btn btn-default active" type="button">1</button>
+                <button class="btn btn-default" type="button">2</button>
+                <button class="btn btn-default" type="button">3</button>
+                <button class="btn btn-default" type="button">Próximo</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+

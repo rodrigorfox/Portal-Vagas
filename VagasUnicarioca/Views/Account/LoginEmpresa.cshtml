@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "LoginEmpresa";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid main-empresa">
+    <div class="container">
+        <div id="Login" class="container-fluid col-md-5 col-xs-11">
+            <form action="@Url.Action("Empresa", "PainelInterno")" method="post">
+                <fieldset>
+                    <legend>Empresa</legend>
+                    <div class="form-group">
+                        <label for="LoginEmpresa">E-mail:</label>
+                        <input class="form-control" type="text" id="LoginEmpresa" name="Login" />
+                    </div>
+                    <div class="form-group">
+                        <label for="SenhaEmpresa">Senha:</label><a href="#" class="pull-right">Esqueci minha senha</a>
+                        <input class="form-control" type="password" id="SenhaEmpresa" name="Senha" />
+                    </div>
+                    <a href="@Url.Action("CadastroEmpresa","PainelInterno")">Novo por aqui? Cadastre-se</a>
+                    <div id="captcha">
+                        <label for="recaptcha">
+                            <input type="checkbox" id="recaptcha"> Não sou um robô.
+                        </label>
+                    </div>
+                    <p><input class="btn btn-danger btn-block" type="submit" value="Acessar" /></p>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+
+</div>
